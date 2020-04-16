@@ -1,0 +1,13 @@
+node_modules
+.docker
+.docs
+.rde
+.tmp
+.vscode/
+.idea/
+.cache/
+dist/
+ts.out/
+types/
+package-lock.json
+.history/

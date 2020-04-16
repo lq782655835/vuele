@@ -1,0 +1,17 @@
+.table-sticky.el-table .el-table__header-wrapper {
+    position: fixed;
+    z-index: 10;
+}
+.table-sticky.el-table .el-table__fixed-header-wrapper {
+    position: fixed;
+    left: auto;
+    right: auto;
+    z-index: 10;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.sticky-footer {
+    position: fixed;
+    z-index: 10;
+}

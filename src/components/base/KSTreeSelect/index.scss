@@ -1,0 +1,70 @@
+@include b(tree) {
+    position: relative;
+}
+@include b(tree-dropdown) {
+    display: block;
+}
+@include b(tree-select) {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-height: 32px;
+    padding: 0 8px;
+    line-height: 32px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    outline: none;
+
+    &:hover {
+        border-color: #c0c4cc;
+    }
+}
+@include b(tree-select-filterName) {
+    margin: 10px 0;
+}
+@include b(tree-select-nameCtn) {
+    position: relative;
+    padding-right: 40px;
+    max-height: 400px;
+    overflow: auto;
+}
+@include b(tree-select-toggleName) {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@include b(tree-dropdown-menu) {
+    max-height: 500px;
+    min-width: 450px;
+    padding-top: 0;
+    overflow: auto;
+}
+
+@include b(tree-dropdown-aside) {
+    margin: 20px 0 20px 20px;
+    border-right: 1px solid #eee;
+
+    & .el-button {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@include b(custom-tree-node) {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.ks-tree-dropdown-menu /deep/ .el-tree-node {
+    padding-left: 8px;
+}
+
+@include b(tree-dropdown-filter) {
+    margin-bottom: 8px;
+}

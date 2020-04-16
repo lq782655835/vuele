@@ -1,0 +1,7 @@
+@include b(label) {
+  @include e(text) {
+    line-height: 32px;
+    font-size: 12px;
+    color: #333;
+  }
+}

@@ -1,0 +1,58 @@
+@include b(left-tree-block) {
+  padding: 15px 16px;
+  background: #fff;
+}
+@include b(aside) {
+  @include e(search) {
+    margin-bottom: 20px;
+
+    & /deep/ .el-input-group__prepend {
+      position: absolute;
+      top: 1px;
+      bottom: 1px;
+      left: 1px;
+      background: transparent;
+      border: 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+      padding: 10px;
+    }
+
+    & /deep/ .el-input__inner {
+      padding-left: 32px;
+    }
+  }
+}
+@include b(aside-container) {
+  height: 600px;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+@include b(aside-ul) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@include b(aside-item) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  line-height: 28px;
+
+  @include m(active) {
+    color: #fff;
+    background: #00c4c0;
+  }
+}
+@include b(main-container) {
+  padding: 0 20px;
+}

@@ -1,0 +1,160 @@
+@include b(upload) {
+    position: relative;
+    padding: 10px;
+    line-height: 12px;
+}
+
+@include b(upload-fileList) {
+    position: absolute;
+    top: 70px;
+    padding: 20px 25px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.10);
+    z-index: 99;
+}
+
+@include b(upload-fileList-item) {
+    display: inline-block;
+    width: 60px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    vertical-align: top;
+}
+
+@include b(upload-unit) {
+    background: #fff;
+    line-height: 1.6;
+    text-align: center;
+    @include e(name) {
+        display: block;
+        margin-top: 8px;
+        padding: 1px;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical; // 打包出来未生效
+        -webkit-line-clamp: 2;
+        font-size: 12px;
+        color: #333;
+    }
+}
+@include b(upload-unit-content) {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: top;
+    border: 1px solid #EEF1F4;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    };
+
+    &:hover {
+        .ks-upload-unit-content-status {
+            display: inline-block;
+        }
+        .ks-upload-unit-content__tip {
+            display: inline-block;
+        }
+    };
+
+    @include e(img) {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+        cursor: zoom-in;
+    }
+
+    @include e(text) {
+        cursor: pointer;
+    }
+
+    @include e(tip) {
+        position: absolute;
+        display: none;
+        right: -6px;
+        top: -6px;
+        width: 17px;
+        height: 17px;
+        font-size: 17px;
+        background: #fff;
+        border-radius: 100px;
+        z-index: 5;
+
+        @include m(count) {
+            display: inline-block;
+            text-align: center;
+            color: #333;
+            font-size: 12px;
+            line-height: 17px;
+            box-sizing: content-box;
+            border: 1px solid #EEF1F4;
+        }
+    }
+}
+
+@include b(upload-unit-content-status) {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #0398FF;
+
+    @include m(success) {
+        cursor: pointer;
+    }
+
+    @include m(fail) {
+        display: inline-block;
+    }
+}
+@include b(upload-opt) {
+    display: inline-block;
+    width: 60px;
+    vertical-align: top;
+}
+@include b(upload-opt-wrap) {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 1px dashed #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+    // line-height: 1.6;
+    font-size: 12px;
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    @include m(dragover) {
+        background-color: rgba(32, 159, 255, .06);
+        border: 1px dashed #20a0ff;
+    }
+}
+@include b(upload-opt-ct) {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    @include e(icon) {
+        display: inline-block;
+        width: 100%;
+        font-size: 12px;
+        color: #666;
+    }
+}

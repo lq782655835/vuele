@@ -1,0 +1,76 @@
+@include b(router-table-step) {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include e(line) {
+    display: inline-block;
+    width: 3px;
+    height: 50%;
+    background: #55c1bf;
+
+    @include m(up) {
+      margin-bottom: 9px;
+    }
+    @include m(down) {
+      margin-top: 9px;
+    }
+  }
+  @include e(radio) {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #55c1bf;
+    border-radius: 7px;
+  }
+}
+
+@include b(router-info-block) {
+  & /deep/ .el-table__header {
+    border: 0;
+  }
+  & /deep/ .ks-router-table__header-cell.is-leaf {
+    border: 0;
+    background-color: inherit;
+  }
+  & /deep/ .ks-router-table__header-cell.is-leaf .cell {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  & /deep/ .ks-router-table__cell {
+    padding: 7px 0 8px;
+    border: 0;
+    color: #333;
+    font-size: 12px;
+    font-weight: 400;
+
+    & .cell {
+      line-height: initial;
+    }
+  }
+  & /deep/ .ks-router-table__cell--unreached {
+    color: #999;
+  }
+
+  & /deep/ .ks-router-table__cell--unreached .ks-router-table-step__line {
+    background: #999;
+  }
+  & /deep/ .ks-router-table__cell--unreached .ks-router-table-step__radio {
+    background: #999;
+  }
+  & /deep/ .ks-router-table-step-ctn--first .ks-router-table-step__line--up {
+    background: transparent;
+  }
+  & /deep/ .ks-router-table-step-ctn--turn .ks-router-table-step__line--down {
+    background: #999;
+  }
+  & /deep/ .ks-router-table-step-ctn--last .ks-router-table-step__line--down {
+    background: transparent;
+  }
+}

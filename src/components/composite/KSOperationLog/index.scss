@@ -1,0 +1,44 @@
+@include b(log-ctn) {
+  max-height: 400px;
+  overflow: auto;
+  padding-right: 20px;
+}
+@include b(log-row) {
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #c0c4cc;
+
+  @include m(oneline) {
+    padding: 8px 0;
+  }
+  .el-col {
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+@include b(log-font) {
+  @include m(grey) {
+    color: #c0c4cc;
+  }
+}
+@include b(log) {
+  @include e(author) {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      border-radius: 10px;
+      background: #c0c4cc;
+    }
+  }
+  @include e(remark) {
+    margin-left: 20px;
+    white-space: normal;
+  }
+  @include e(content) {
+    margin-left: 20px;
+  }
+}

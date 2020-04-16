@@ -1,0 +1,26 @@
+@include b(header) {
+  position: sticky;
+  top: 40px;
+  z-index: 2;
+  @include e(status) {
+    border-color: #00C4C0;
+    color: #00C4C0;
+  }
+}
+@include b(header-title) {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+  line-height: 30px;
+}
+@include b(header-desc) {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999999;
+  line-height: 2;
+}
+@include b(header-operation) {
+  @include e(more) {
+    margin-right: 10px;
+  }
+}

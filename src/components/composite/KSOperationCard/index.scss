@@ -1,0 +1,38 @@
+@include b(card) {
+  @include e(subHeader) {
+    margin-left: 20px;
+    color: #999;
+    font-size: 12px;
+  }
+
+  & /deep/ .el-card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &.collapse /deep/ .el-card__body {
+    padding: 0;
+  }
+}
+@include b(card-operation) {
+  position: absolute;
+  right: 20px;
+
+  & /deep/ .el-button--text {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  @include e(collapse) {
+    font-size: 14px;
+    font-weight: 700;
+
+    & .el-icon-arrow-up,
+    & .el-icon-arrow-down {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}

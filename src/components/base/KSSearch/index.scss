@@ -1,0 +1,34 @@
+@include b(search-row) {
+  flex-wrap: wrap;
+}
+
+@include b(search-tip) {
+  flex: 1;
+  margin: 0 10px;
+
+  @include e(text) {
+    color: #999;
+    font-size: 12px;
+    line-height: 16px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@include b(search-buttons) {
+  & /deep/ .el-form-item {
+    .el-form-item__content {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@include b(search-inline-buttons) {
+  & /deep/ .el-form-item__label {
+    visibility: hidden;
+  }
+}

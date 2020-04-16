@@ -1,0 +1,102 @@
+{
+  "name": "vuele",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lq782655835/vuele",
+  "scripts": {
+    "serve": "vue-cli-service serve ./src/__demo__/dev.ts",
+    "build": "vue-cli-service build --target=lib --name=vuele ./src/index.ts",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "release:docs": "npm run docs:build && gh-pages -d docs/.vuepress/dist",
+    "lint": "eslint --ext .ts,.tsx,.vue  --fix src",
+    "prebuild": "rm -rf ./types && tsc -p ./tsconfig.json",
+    "postbuild": "rm -rf ./types/__demo__",
+    "release": "standard-version -i CHANGELOG.md -r patch",
+    "cm": "git-cz",
+    "prepublishOnly": "npm run build && npm run release && git push"
+  },
+  "main": "./dist/vuele.umd.js",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "keywords": [
+    "vue",
+    "springleo",
+    "rde"
+  ],
+  "author": "springleo",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,vue}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dayjs": "^1.8.14",
+    "qs": "^6.7.0",
+    "vue-clipboard2": "^0.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@types/chai": "^4.1.0",
+    "@types/mocha": "^5.2.4",
+    "@types/qs": "^6.5.2",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0-beta.3",
+    "@vue/babel-preset-jsx": "^1.0.0-beta.3",
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-plugin-typescript": "^3.5.0",
+    "@vue/cli-plugin-unit-mocha": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.1.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "element-ui": "^2.10.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-vue": "^5.0.0",
+    "gh-pages": "^2.2.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^8.1.4",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.find": "^4.6.0",
+    "lodash.get": "^4.4.2",
+    "lodash.uniq": "^4.5.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "standard-version": "^7.0.0",
+    "style-resources-loader": "^1.2.1",
+    "typescript": "^3.2.1",
+    "vue": "^2.6.10",
+    "vue-class-component": "^6.0.0",
+    "vue-cli-plugin-style-resources-loader": "^0.1.3",
+    "vue-property-decorator": "^8.0.0",
+    "vue-router": "^3.0.6",
+    "vue-template-compiler": "^2.5.21",
+    "vuepress": "^1.0.0-rc.1",
+    "vuepress-plugin-leo-demo-block": "^0.1.0",
+    "vuepress-theme-antdocs": "^1.0.0",
+    "webpack-bundle-analyzer": "^3.3.2"
+  },
+  "types": "./types/index.d.ts"
+}

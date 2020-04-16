@@ -1,0 +1,79 @@
+@include b(divider) {
+    height: 0px;
+    width: 0px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(0,0,0,.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #eee;
+    @include m(horizontal) {
+        display: block;
+        width: 100%;
+        margin: 16px 0;
+        clear: both;
+    }
+    @include m(vertical) {
+        margin: 0 8px;
+        display: inline-block;
+        height: 0.9em;
+        border-right: 1px solid #eee;
+        vertical-align: middle;
+        position: relative;
+        top: -0.06em;
+    }
+    @include m(dashed) {
+        border-top-style: dashed;
+        border-right-style: dashed;
+    }
+}
+@include b(divider-text) {
+    display: table;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 500;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    border: none;
+    margin: 16px 0;
+    &:before,
+    &:after {
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: 50%;
+        width: 50%;
+        border-top: 1px solid #eee;
+        transform: translateY(50%);
+    }
+    @include m(left) {
+        &:before {
+            width: 5%;
+        }
+        &:after {
+            width: 95%;
+        }
+    }
+    @include m(right) {
+        &:before {
+            width: 95%;
+        }
+        &:after {
+            width: 5%;
+        }
+    }
+    @include m(dashed) {
+        &:before,
+        &:after {
+            border-top: 1px dashed #eee;
+        }
+    }
+}
+
+@include b(divider-inner-text){
+    display: inline-block;
+    padding: 0 16px;
+}
