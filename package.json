@@ -5,9 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve ./src/__demo__/dev.ts",
     "build": "vue-cli-service build --target=lib --name=vuele ./src/index.ts",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "release:docs": "npm run docs:build && gh-pages -d docs/.vuepress/dist",
+    "dev:docs": "vuepress dev docs",
+    "build:docs": "vuepress build docs",
+    "release:docs": "npm run build:docs && gh-pages -d docs/.vuepress/dist",
     "lint": "eslint --ext .ts,.tsx,.vue  --fix src",
     "prebuild": "rm -rf ./types && tsc -p ./tsconfig.json",
     "postbuild": "rm -rf ./types/__demo__",

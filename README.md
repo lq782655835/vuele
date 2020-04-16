@@ -1,6 +1,8 @@
 ## vuele
 
-基于ElementUI上的业务组件库
+基于ElementUI上的业务组件库.
+
+文档预览：https://lq782655835.github.io/vuele/
 
 ### Install
 

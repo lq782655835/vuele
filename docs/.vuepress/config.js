@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'vuele业务组件库库',
+    title: 'vuele业务组件库',
     description: 'component lib',
     base: '/vuele/',
     theme: 'antdocs',
