@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.2 (2020-04-16)
+
+
+### Features
+
+* init FrameWork ([3bcb0f0](https://github.com/lq782655835/vuele/commit/3bcb0f07618d89e17e7eefaa8beab8d19290b5ae))
+
 ### [0.0.4](https://github.com/lq782655835/vuele/compare/v0.0.3...v0.0.4) (2020-04-15)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "vuele",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/lq782655835/vuele",
   "scripts": {
     "serve": "vue-cli-service serve ./src/__demo__/dev.ts",
