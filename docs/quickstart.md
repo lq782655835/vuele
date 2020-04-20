@@ -4,23 +4,23 @@
 
 ## Install
 
+vuele业务组件库依赖ElementUI，需要一并安装
+
 ``` bash
 # 安装
-npm i vuele -S
+npm i element-ui vuele -S
 
 ```
 
 ## Usage(全局)
 
 ``` javascript
-import Vue from 'vue';
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI)
 
 import vuele from 'vuele';
 import 'vuele/dist/vuele.css';
-
 Vue.use(vuele, {
     // 传入项目级配置
     selectUrl() {
@@ -53,6 +53,3 @@ export default {
 }
 
 ```
-
-## 注意事项
-- vuele组件库依赖elementUI，需单独引入
