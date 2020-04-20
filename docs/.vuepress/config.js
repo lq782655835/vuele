@@ -68,7 +68,10 @@ module.exports = {
     },
     plugins: [
         'leo-demo-block',
-        require('./lib')
+        require('./lib'),
+        ['code-copy', {
+            align: 'top'
+        }]
     ],
     // configureWebpack: {
     //     plugins: [

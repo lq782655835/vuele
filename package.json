@@ -94,6 +94,7 @@
     "vue-router": "^3.0.6",
     "vue-template-compiler": "^2.5.21",
     "vuepress": "^1.0.0-rc.1",
+    "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-leo-demo-block": "^0.1.0",
     "vuepress-theme-antdocs": "^1.0.0",
     "webpack-bundle-analyzer": "^3.3.2"
