@@ -11,6 +11,7 @@ module.exports = {
         nav: [
             { text: '📃首页', link: '/' },
             { text: '📢组件库', link: '/quickstart' },
+            { text: '可视化布局[New]', link: 'https://lq782655835.github.io/vue-layout-preview' },
         ],
         sidebar: [
             {
